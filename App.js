@@ -1,11 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, SafeAreaView } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { useState } from "react";
+import { StyleSheet, Text, SafeAreaView } from "react-native";
+import { LoginComponent } from "./components/LoginComponent";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Hello!!!</Text>
-      <StatusBar style="auto" />
+      <LoginComponent />
     </SafeAreaView>
   );
 }
@@ -13,7 +14,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-   
+    backgroundColor: "#fff",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
