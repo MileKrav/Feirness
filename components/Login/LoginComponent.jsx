@@ -1,13 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
-import {
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-  StyleSheet,
-  SafeAreaView,
-} from "react-native";
+import { Text, TextInput, TouchableOpacity, View, StyleSheet, SafeAreaView, Image } from "react-native";
 
 const LoginComponent = ({ navigation }) => {
   const [login, setLogin] = useState("");
@@ -24,7 +17,7 @@ const LoginComponent = ({ navigation }) => {
     } else if (login === "superAdmin") {
       navigation.navigate("SuperAdmin");
     } else {
-      console.log("kek");
+      return;
     }
   };
 
@@ -33,11 +26,7 @@ const LoginComponent = ({ navigation }) => {
       <View>
         <StatusBar style="auto" />
         <View style={styles.inputView}>
-          <TextInput
-            style={styles.TextInput}
-            placeholder="login"
-            onChangeText={(login) => setLogin(login)}
-          />
+          <TextInput style={styles.TextInput} placeholder="login" onChangeText={(login) => setLogin(login)} />
         </View>
         <View style={styles.inputView}>
           <TextInput
@@ -85,7 +74,7 @@ const styles = StyleSheet.create({
 
   loginBtn: {
     display: "flex",
-    flex: 1,
+    textAlign: "center",
     color: "#f3f3f3",
     borderRadius: 25,
     alignItems: "center",

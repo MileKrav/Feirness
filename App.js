@@ -5,6 +5,7 @@ import LoginComponent from "./components/Login/LoginComponent";
 import AdminComponent from "./components/Admin/AdminComponent";
 import RefereeComponent from "./components/Referee/RefereeComponent";
 import SuperAdminComponent from "./components/Admin/SuperAdmin";
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
