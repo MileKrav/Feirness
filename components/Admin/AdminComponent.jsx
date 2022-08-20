@@ -1,94 +1,74 @@
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
-import { 
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-  StyleSheet,
-  SafeAreaView,
-  Button
-} from "react-native";
+import { Text, TextInput, TouchableOpacity, View, StyleSheet, SafeAreaView, Button } from "react-native";
 
-
-const AdminComponent = ({navigation}) => {
-  const Judgee = () =>{
+const AdminComponent = ({ navigation }) => {
+  const Judgee = () => {
     navigation.navigate("Judge");
-  }
-  const ArtistModel = () =>{
+  };
+  const ArtistModel = () => {
     navigation.navigate("ArtistModel");
-  }
-  
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <View>
-       <TouchableOpacity>
-          <Text style={styles.Btn} onPress={() => ArtistModel()}>
-          Register model/artist
-          </Text>
+        <TouchableOpacity style={styles.roundButton2}>
+          <Text onPress={() => ArtistModel()}>Register model/artist</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
-          <Text style={styles.Btn} onPress={() => Judgee()}>
-          Register Judje
-          </Text>
+        <TouchableOpacity style={styles.roundButton2}>
+          <Text onPress={() => Judgee()}>Register Judje</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
-          <Text style={styles.Btn} onPress={() => navigate1()}>
-          Edit Model
-          </Text>
+        <TouchableOpacity style={styles.roundButton2}>
+          <Text onPress={() => navigate1()}>Edit Model</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
-          <Text style={styles.Btn} onPress={() => navigate1()}>
-          Edit Judje
-          </Text>
+        <TouchableOpacity style={styles.roundButton2}>
+          <Text onPress={() => navigate1()}>Edit Judje</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
-          <Text style={styles.Btn} onPress={() => navigate1()}>
-          Status Page
-          </Text>
+        <TouchableOpacity style={styles.roundButton2}>
+          <Text onPress={() => navigate1()}>Status Page</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
-          <Text style={styles.Btn} onPress={() => navigate1()}>
-          Results
-          </Text>
+        <TouchableOpacity style={styles.roundButton2}>
+          <Text onPress={() => navigate1()}>Results</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
-          <Text style={styles.Btn} onPress={() => navigate1()}>
-          Super admin
-          </Text>
+        <TouchableOpacity style={styles.roundButton2}>
+          <Text onPress={() => navigate1()}>Super admin</Text>
         </TouchableOpacity>
-      
-      
       </View>
-    <StatusBar style='auto'/>
-  </SafeAreaView>
+      <StatusBar style="auto" />
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    display:"flex",
+    display: "flex",
     gap: 3,
     top: 100,
     justifyContent: "space-between",
     alignItems: "center",
-    
   },
   Btn: {
-    
     display: "flex",
     color: "#f3f3f3",
-    borderRadius: 34,
+    borderRadius: 100,
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#FF1493",
     height: 50,
     marginBottom: 30,
     width: 250,
-    
-    
-    
-  }
-})
+  },
+  roundButton2: {
+    marginTop: 20,
+    width: 150,
+    height: 150,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 10,
+    borderRadius: 50,
+    backgroundColor: "#ccc",
+  },
+});
 
 export default AdminComponent;

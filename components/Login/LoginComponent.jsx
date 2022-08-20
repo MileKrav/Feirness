@@ -1,13 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
-import {
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-  StyleSheet,
-  SafeAreaView,
-} from "react-native";
+import { Text, TextInput, TouchableOpacity, View, StyleSheet, SafeAreaView } from "react-native";
 
 const LoginComponent = ({ navigation }) => {
   const [login, setLogin] = useState("");
@@ -33,11 +26,7 @@ const LoginComponent = ({ navigation }) => {
       <View>
         <StatusBar style="auto" />
         <View style={styles.inputView}>
-          <TextInput
-            style={styles.TextInput}
-            placeholder="login"
-            onChangeText={(login) => setLogin(login)}
-          />
+          <TextInput style={styles.TextInput} placeholder="login" onChangeText={(login) => setLogin(login)} />
         </View>
         <View style={styles.inputView}>
           <TextInput
@@ -46,13 +35,11 @@ const LoginComponent = ({ navigation }) => {
             onChangeText={(password) => setPassword(password)}
           />
         </View>
-        <TouchableOpacity>
-          <Text style={styles.forgot_button}>Forgot password?</Text>
+        <TouchableOpacity style={styles.forgot_button}>
+          <Text>Forgot password?</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
-          <Text style={styles.loginBtn} onPress={() => navigate1()}>
-            Login
-          </Text>
+        <TouchableOpacity style={styles.loginBtn}>
+          <Text onPress={() => navigate1()}>Login</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -62,7 +49,6 @@ const LoginComponent = ({ navigation }) => {
 export default LoginComponent;
 
 const styles = StyleSheet.create({
-  
   inputView: {
     backgroundColor: "#FFC0CB",
     borderRadius: 30,
@@ -100,6 +86,5 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    
   },
 });
