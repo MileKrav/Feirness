@@ -1,6 +1,15 @@
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
-import { Text, TextInput, TouchableOpacity, View, StyleSheet, SafeAreaView, Button } from "react-native";
+import {
+  Text,
+  ScrollView,
+  TextInput,
+  TouchableOpacity,
+  View,
+  StyleSheet,
+  SafeAreaView,
+  Button,
+} from "react-native";
 
 const AdminComponent = ({ navigation }) => {
   const Judgee = () => {
@@ -12,7 +21,7 @@ const AdminComponent = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View>
+      <ScrollView style={styles.scrollview}>
         <TouchableOpacity style={styles.roundButton2}>
           <Text onPress={() => ArtistModel()}>Register model/artist</Text>
         </TouchableOpacity>
@@ -34,8 +43,9 @@ const AdminComponent = ({ navigation }) => {
         <TouchableOpacity style={styles.roundButton2}>
           <Text onPress={() => navigate1()}>Super admin</Text>
         </TouchableOpacity>
-      </View>
-      <StatusBar style="auto" />
+
+        <StatusBar style="auto" />
+      </ScrollView>
     </SafeAreaView>
   );
 };
@@ -48,6 +58,11 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
   },
+  scrollview: {
+    backgroundColor: "pink",
+    marginHorizontal: 20,
+  },
+
   Btn: {
     display: "flex",
     color: "#f3f3f3",
