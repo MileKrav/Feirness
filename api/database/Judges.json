@@ -1,0 +1,19 @@
+{
+  "judges": {
+    "judge": [
+      { "judge_id": 1, "judge_bla_bla": "bla_bla" },
+      {
+        "judge_id": 2,
+        "judge_bla_bla": "bla_bla"
+      },
+      {
+        "judge_id": 3,
+        "judge_bla_bla": "bla_bla"
+      },
+      {
+        "judge_id": 4,
+        "judge_bla_bla": "bla_bla"
+      }
+    ]
+  }
+}

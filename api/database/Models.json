@@ -1,0 +1,21 @@
+{
+  "models": {
+    "model": [
+      {
+        "model_id": "1",
+        "firstName": "Tom",
+        "category": "category 3"
+      },
+      {
+        "model_id": "2",
+        "firstName": "Maria",
+        "category": "category 3"
+      },
+      {
+        "model_id": "3",
+        "firstName": "James",
+        "category": "category 3"
+      }
+    ]
+  }
+}

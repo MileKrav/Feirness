@@ -13,9 +13,9 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen name="Referee" component={RefereeComponent} />
         <Stack.Screen name="Admin" component={AdminComponent} />
         <Stack.Screen name="Login" component={LoginComponent} />
-        <Stack.Screen name="Referee" component={RefereeComponent} />
         <Stack.Screen name="SuperAdmin" component={SuperAdminComponent} />
         <Stack.Screen name="Judge" component={JudgeComponent} />
         <Stack.Screen name="ArtistModel" component={ArtistModelComponent} />
