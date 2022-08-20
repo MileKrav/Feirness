@@ -62,12 +62,13 @@ const LoginComponent = ({ navigation }) => {
 export default LoginComponent;
 
 const styles = StyleSheet.create({
+  
   inputView: {
     backgroundColor: "#FFC0CB",
     borderRadius: 30,
     height: 45,
     marginBottom: 20,
-
+    justifyContent: "center",
     alignItems: "center",
   },
 
@@ -75,27 +76,30 @@ const styles = StyleSheet.create({
     height: 50,
     flex: 1,
     padding: 10,
-    marginLeft: 20,
+    marginLeft: 0,
   },
 
   forgot_button: {
     height: 30,
-    marginBottom: 30,
+    marginBottom: 0,
   },
 
   loginBtn: {
     display: "flex",
-    flex: 1,
+    // flex: 1,
     color: "#f3f3f3",
-    borderRadius: 25,
+    borderRadius: 30,
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#FF1493",
+    width: 250,
+    height: 40,
   },
 
   container: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    
   },
 });
