@@ -9,16 +9,31 @@ import {
   SafeAreaView,
   Button
 } from "react-native";
+//import { auth } from "../config";
 
+
+ 
 const Judge = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  // const handleSighUp = () =>{
+  //   auth
+  //   .createUserWithEmailAndPassword(email, password)
+  //   .then(userCredentials =>{
+  //     const user = userCredentials.user;
+  //     console.log(user.email);
+  //   })
+  //   .catch(error => alert(error.massage))
+  // }
     return (
       <SafeAreaView style={styles.container}>
         <View>
-         <TouchableOpacity>
-            <Text style={styles.Btn} onPress={() => navigate1()}>
+         {/* <TouchableOpacity style={styles.Btn}>
+            <Text  onPress={() => navigate1()}>
             Upload Judge photo
             </Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
 
           <View style={styles.inputView}>
           <TextInput
@@ -31,6 +46,7 @@ const Judge = () => {
           <TextInput
             style={styles.TextInput}
             placeholder="Create judges username"
+            onChangeText={ text => setEmail(text)}
            
           />
         </View>
@@ -38,12 +54,12 @@ const Judge = () => {
           <TextInput
             style={styles.TextInput}
             placeholder="Create juges password"
-            
+            onChangeText={ text => setPassword(text)}
           />
         </View>
         
-          <TouchableOpacity>
-            <Text style={styles.Btn} onPress={() => navigate1()}>
+          <TouchableOpacity style={styles.Btn}>
+            <Text  onPress={handleSighUp}>
             Submit
             </Text>
           </TouchableOpacity>
@@ -58,8 +74,9 @@ const Judge = () => {
 const styles = StyleSheet.create({
   
   inputView: {
-    backgroundColor: "#FFC0CB",
+    backgroundColor: "#ffffff",
     borderRadius: 30,
+    borderWidth: 1,
     height: 45,
     marginBottom: 20,
     justifyContent: "center",
@@ -76,15 +93,14 @@ const styles = StyleSheet.create({
  
   Btn: {
     
-    display: "flex",
-    color: "#f3f3f3",
-    borderRadius: 34,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#FF1493",
-    height: 50,
-    marginBottom: 30,
+    margin: 20,
     width: 250,
+    height: 50,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 10,
+    borderRadius: 50,
+    backgroundColor: "#ccc",
     
   },
   

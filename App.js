@@ -7,14 +7,23 @@ import SuperAdminComponent from "./components/Admin/SuperAdmin";
 import JudgeComponent from "./components/Registration/Judge";
 import ArtistModelComponent from "./components/Registration/ArtistModel";
 import Test2 from "./components/Test2";
+
+// import { ref, set } from "firebase/database";
+// import { db } from "./components/config";
+
+
 const Stack = createNativeStackNavigator();
 
+
 export default function App() {
+
+  
   return (
+
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Admin" component={AdminComponent} />
         <Stack.Screen name="Login" component={LoginComponent} />
+        <Stack.Screen name="Admin" component={AdminComponent} />
         <Stack.Screen name="Referee" component={RefereeComponent} />
         <Stack.Screen name="SuperAdmin" component={SuperAdminComponent} />
         <Stack.Screen name="Judge" component={JudgeComponent} />

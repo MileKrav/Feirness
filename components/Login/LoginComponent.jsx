@@ -2,13 +2,19 @@ import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
 import { Text, TextInput, TouchableOpacity, View, StyleSheet, SafeAreaView } from "react-native";
 
+// import { ref, set } from "firebase/database";
+// import { db } from "./components/config";
+
+//const LoginComponent = ({  }) => {
 const LoginComponent = ({ navigation }) => {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
 
-  // I'm not sure that is nice implementation, but it works :)
+  
+  
+ // I'm not sure that is nice implementation, but it works :)
   const navigate1 = () => {
-    if (login === "admin") {
+    if (login === "Admin") {
       navigation.navigate("Admin");
     } else if (login.length < 1) {
       navigation.navigate("Login");
@@ -26,8 +32,9 @@ const LoginComponent = ({ navigation }) => {
       <View>
         <StatusBar style="auto" />
         <View style={styles.inputView}>
-          <TextInput style={styles.TextInput} placeholder="login" onChangeText={(login) => setLogin(login)} />
+          <TextInput style={styles.TextInput}  placeholder="login"    onChangeText={(login) => setLogin(login)} />
         </View>
+
         <View style={styles.inputView}>
           <TextInput
             style={styles.TextInput}
@@ -35,11 +42,9 @@ const LoginComponent = ({ navigation }) => {
             onChangeText={(password) => setPassword(password)}
           />
         </View>
-        <TouchableOpacity style={styles.forgot_button}>
-          <Text>Forgot password?</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.loginBtn}>
-          <Text onPress={() => navigate1()}>Login</Text>
+        
+        <TouchableOpacity style={styles.loginBtn} >
+          <Text onPress={ () => navigate1()}>Login</Text> 
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -50,8 +55,9 @@ export default LoginComponent;
 
 const styles = StyleSheet.create({
   inputView: {
-    backgroundColor: "#FFC0CB",
+    backgroundColor: "#fff",
     borderRadius: 30,
+    borderWidth: 1,
     height: 45,
     marginBottom: 20,
     justifyContent: "center",
@@ -73,11 +79,11 @@ const styles = StyleSheet.create({
   loginBtn: {
     display: "flex",
     // flex: 1,
-    color: "#f3f3f3",
+    color: "#ccc",
     borderRadius: 30,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#FF1493",
+    backgroundColor: "#ccc",
     width: 250,
     height: 40,
   },

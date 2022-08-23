@@ -35,14 +35,14 @@ const ArtistModel = () => {
           />
         </View>
        
-        <TouchableOpacity>
-            <Text style={styles.Btn} onPress={() => navigate1()}>
+        <TouchableOpacity style={styles.Btn}>
+            <Text  onPress={() => navigate1()}>
             Take model photo 
             </Text>
           </TouchableOpacity>
         
-          <TouchableOpacity>
-            <Text style={styles.Btn} onPress={() => navigate1()}>
+          <TouchableOpacity style={styles.Btn}>
+            <Text  onPress={() => navigate1()}>
             Submit
             </Text>
           </TouchableOpacity>
@@ -57,10 +57,12 @@ const ArtistModel = () => {
 const styles = StyleSheet.create({
   
   inputView: {
-    backgroundColor: "#FFC0CB",
+    
+    backgroundColor: "#ffff",
     borderRadius: 30,
+    borderWidth: 1,
     height: 45,
-    marginBottom: 20,
+    marginBottom: 15,
     justifyContent: "center",
     alignItems: "center",
   },
@@ -74,17 +76,14 @@ const styles = StyleSheet.create({
 
   Btn: {
     
-    display: "flex",
-    color: "#f3f3f3",
-    borderRadius: 34,
-    
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#FF1493",
-    height: 50,
-    marginBottom: 30,
+    marginTop: 20,
     width: 250,
-    paddingVertical: 15,
+    height: 50,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 10,
+    borderRadius: 50,
+    backgroundColor: "#ccc",
     
     
   },

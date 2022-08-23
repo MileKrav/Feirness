@@ -12,11 +12,14 @@ import {
 } from "react-native";
 
 const AdminComponent = ({ navigation }) => {
-  const Judgee = () => {
+  const Judge = () => {
     navigation.navigate("Judge");
   };
   const ArtistModel = () => {
     navigation.navigate("ArtistModel");
+  };
+  const Refere = () => {
+    navigation.navigate("Refere");
   };
 
   return (
@@ -26,10 +29,10 @@ const AdminComponent = ({ navigation }) => {
           <Text onPress={() => ArtistModel()}>Register model/artist</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.roundButton2}>
-          <Text onPress={() => Judgee()}>Register Judje</Text>
+          <Text onPress={() => Judge()}>Register Judje</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.roundButton2}>
-          <Text onPress={() => navigate1()}>Edit Model</Text>
+          <Text onPress={() => Refere()}>Edit Model</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.roundButton2}>
           <Text onPress={() => navigate1()}>Edit Judje</Text>
@@ -59,25 +62,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   scrollview: {
-    backgroundColor: "pink",
+    //backgroundColor: "pink",
     marginHorizontal: 20,
   },
 
-  Btn: {
-    display: "flex",
-    color: "#f3f3f3",
-    borderRadius: 100,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#FF1493",
-    height: 50,
-    marginBottom: 30,
-    width: 250,
-  },
   roundButton2: {
     marginTop: 20,
-    width: 150,
-    height: 150,
+    width: 250,
+    height: 50,
     justifyContent: "center",
     alignItems: "center",
     padding: 10,
